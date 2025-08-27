@@ -55,12 +55,12 @@ Install Docker Engine and verify it.
 5. Update package index again: 
 ```sudo apt-get update```
  
-6. Install Docker Engine and CLI: 
+6. Install Docker Engine and CLI:
 ```sudo apt-get install -y docker-ce docker-ce-cli containerd.io```
 
-7. Add your user to the docker group: 
-```sudo usermod -aG docker $USER  
-newgrp docker```
+7. Add your user to the docker group:
+`sudo usermod -aG docker $USER`
+`newgrp docker`
 
 8. Verify Docker installation: 
 ```docker --version```
