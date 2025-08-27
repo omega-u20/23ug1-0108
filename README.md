@@ -1,12 +1,12 @@
-#Assignment 2
-##Application Description: What the application does.
+# Assignment 2
+## Application Description: What the application does.
 The bash scripts in this repo can be used to:
 - prepare-app.sh : To prepare the app
 - start-app.sh : To start the app
 - stop-app.sh : To stop the app
 - remove-app.sh : To remove app
 
-##Deployment Requirements: Detailed list of required software (e.g., Docker, Docker Compose).
+## Deployment Requirements: Detailed list of required software (e.g., Docker, Docker Compose).
 To run this application, ensure the following software and environment setup:
 - Operating System: Ubuntu 22.04.02
 - Docker Engine: Installed and running
@@ -15,29 +15,29 @@ To run this application, ensure the following software and environment setup:
 - Web Browser(Firefox)
 - Basic CLI Knowledge
  
-##Network and Volume Details: Description of virtual networks and named volumes used.
->networks: app-network
+## Network and Volume Details: Description of virtual networks and named volumes used.
+>networks: app-network  
 >volumes: redis_data
 
-##Container Configuration: Details of how containers are configured.
-flask_app
-- Build Context: Local directory with Dockerfile
-- Exposed Port: 5000 (mapped to host)
-- Dependencies: Waits for redis\_db to be ready (depends\_on)
-- Network: app-network
+## Container Configuration: Details of how containers are configured.
+1. flask_app
+	- Build Context: Local directory with Dockerfile
+	- Exposed Port: 5000 (mapped to host)
+	- Dependencies: Waits for redis\_db to be ready (depends\_on)
+	- Network: app-network
 
-redis_db
-- Image: redis:7-alpine
-- Volume Mount: /data mapped to redis_data
-- Network: app-network
+2. redis_db
+	- Image: redis:7-alpine
+	- Volume Mount: /data mapped to redis_data
+	- Network: app-network
 
-##Container List: List of containers and their roles.
+## Container List: List of containers and their roles.
 | Container | Role |
 |-----------|------|
 | flask_app | Hosts the Flask web server |
 | redis_db | Stores and manages visit counter |
 
-##Instructions:
+## Instructions:
 Prerequisites
 Install Docker Engine and verify it. 
 1. Update the package index:
@@ -59,7 +59,7 @@ Install Docker Engine and verify it.
 ```sudo apt-get install -y docker-ce docker-ce-cli containerd.io```
 
 7. Add your user to the docker group: 
-```sudo usermod -aG docker $USER
+```sudo usermod -aG docker $USER  
 newgrp docker```
 
 8. Verify Docker installation: 
@@ -69,10 +69,11 @@ Install Docker Compose and verify it.
 1. Install Docker Compose if not already installed:
 ```sudo apt-get update
 sudo apt-get install-y docker-compose```
+
 2. Verify Docker Compose:
 ```docker-compose --version```
 
-###To allow the bash scripts to execute
+### To allow the bash scripts to execute
 Do the following for every .sh in the folder
 `chmod +x <file name>.sh`
 *Important: without this the bash script will not excute*
@@ -95,7 +96,7 @@ After executing `./start-app.sh` the output will show the app link
 >App is available at http://localhost:5000
 By clicking the link or pasting it on a web browser address bar we can access the app
 
-##Example Workflow: Demonstrate application usage, 
+## Example Workflow: Demonstrate application usage, 
 `$ ./prepare-app.sh`
 >```Preparing App...
 
