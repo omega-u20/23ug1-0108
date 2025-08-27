@@ -107,10 +107,9 @@ Dockerfile Created
 App prepared...```
 
 `$ ./start-app.sh`
->```App starting...
-Creating network "assignment_app-network" with driver "bridge"
-Building flask_app
-...
+>```App starting...</br>
+Creating network "assignment_app-network" with driver "bridge"  
+Building flask_app<br>...
 App is available at http://localhost:5000```
 
 *All the user prompts are CASE sensitive*
