@@ -67,10 +67,10 @@ Install Docker Engine and verify it.
 
 Install Docker Compose and verify it.
 1. Install Docker Compose if not already installed:
-```sudo apt-get update
-sudo apt-get install-y docker-compose```
+	```sudo apt-get update
+	sudo apt-get install-y docker-compose```
 
-2. Verify Docker Compose:
+3. Verify Docker Compose:
 ```docker-compose --version```
 
 ### To allow the bash scripts to execute
